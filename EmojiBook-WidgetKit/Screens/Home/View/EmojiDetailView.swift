@@ -10,19 +10,19 @@ import SwiftUI
 struct EmojiDetailView: View {
   // MARK: Properties
 
-  let emoji: Emoji
+  let emoji: Emoji?
 
   // MARK: Body
 
   var body: some View {
     ZStack {
       VStack(alignment: .center, spacing: 8) {
-        Text(emoji.emoji)
+        Text(emoji?.emoji ?? "")
           .font(.system(size: 48))
-        Text(emoji.name)
+        Text(emoji?.name ?? "")
           .font(.title3)
           .foregroundColor(.white)
-        Text(emoji.description)
+        Text(emoji?.description ?? "")
           .font(.body)
           .foregroundColor(.white)
           .multilineTextAlignment(.center)

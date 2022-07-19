@@ -11,6 +11,7 @@ class HomeViewModel: ObservableObject {
   // MARK: Properties
 
   @Published var isShowDetail: Bool = false
+  @Published var selectedEmoji: Emoji?
   let emojis: Emojis = EmojiProvider.shared.all()
 
   // MARK: Init

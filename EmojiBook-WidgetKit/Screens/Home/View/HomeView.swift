@@ -19,13 +19,14 @@ struct HomeView: View {
       List {
         ForEach(vm.emojis) { emoji in
           EmojiTableView(emoji: emoji, action: {
+            vm.selectedEmoji = emoji
             vm.isShowDetail = true
-          })
-          .sheet(isPresented: $vm.isShowDetail, content: {
-//            EmojiDetailView()
           })
         }
       }
+      .sheet(isPresented: $vm.isShowDetail, content: {
+        EmojiDetailView(emoji: vm.selectedEmoji)
+      })
       .navigationTitle("Emoji Book 🥸")
     }
     .navigationViewStyle(.stack)
