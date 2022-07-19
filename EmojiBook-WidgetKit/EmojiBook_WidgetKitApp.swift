@@ -9,9 +9,9 @@ import SwiftUI
 
 @main
 struct EmojiBook_WidgetKitApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
-        }
+  var body: some Scene {
+    WindowGroup {
+      HomeView()
     }
+  }
 }
