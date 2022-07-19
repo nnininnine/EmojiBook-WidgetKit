@@ -8,9 +8,27 @@
 import SwiftUI
 
 struct HomeView: View {
+  // MARK: Properties
+
+  @StateObject private var vm: HomeViewModel = .init()
+
+  // MARK: Body
+
   var body: some View {
-    NavigationView {}
-      .navigationViewStyle(.stack)
+    NavigationView {
+      List {
+        ForEach(vm.emojis) { emoji in
+          EmojiTableView(emoji: emoji, action: {
+            vm.isShowDetail = true
+          })
+          .sheet(isPresented: $vm.isShowDetail, content: {
+            Text("\(emoji.emoji) \(emoji.name)")
+          })
+        }
+      }
+      .navigationTitle("Emoji Book 🥸")
+    }
+    .navigationViewStyle(.stack)
   }
 }
 
