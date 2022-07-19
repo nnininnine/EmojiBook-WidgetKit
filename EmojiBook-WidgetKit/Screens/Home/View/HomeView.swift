@@ -22,7 +22,7 @@ struct HomeView: View {
             vm.isShowDetail = true
           })
           .sheet(isPresented: $vm.isShowDetail, content: {
-            Text("\(emoji.emoji) \(emoji.name)")
+//            EmojiDetailView()
           })
         }
       }
