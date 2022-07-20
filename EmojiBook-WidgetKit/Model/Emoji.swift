@@ -21,6 +21,13 @@ struct EmojiProvider {
 
   private init() {}
 
+  func rand() -> Emoji {
+    let emojis: Emojis = all()
+    let randIndex = Int.random(in: 0 ..< emojis.count)
+
+    return emojis[randIndex]
+  }
+
   func all() -> Emojis {
     return [
       Emoji(

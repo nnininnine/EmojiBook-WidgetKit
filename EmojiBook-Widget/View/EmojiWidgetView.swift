@@ -11,6 +11,8 @@ import WidgetKit
 struct EmojiWidgetView: View {
   // MARK: Properties
 
+  let emoji: Emoji
+
   // MARK: Body
 
   var body: some View {
@@ -20,7 +22,7 @@ struct EmojiWidgetView: View {
 
 struct EmojiWidgetView_Previews: PreviewProvider {
   static var previews: some View {
-    EmojiWidgetView()
+    EmojiWidgetView(emoji: EmojiProvider.shared.rand())
       .previewContext(WidgetPreviewContext(family: .systemSmall))
   }
 }
