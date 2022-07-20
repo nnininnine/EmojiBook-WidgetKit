@@ -16,6 +16,8 @@ struct EmojiDetailView: View {
 
   var body: some View {
     ZStack {
+      Color.indigo
+
       VStack(alignment: .center, spacing: 8) {
         Text(emoji?.emoji ?? "")
           .font(.system(size: 48))
@@ -29,8 +31,7 @@ struct EmojiDetailView: View {
           .padding()
       }
     }
-    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height)
-    .background(.indigo)
+    .ignoresSafeArea()
   }
 }
 
