@@ -14,6 +14,8 @@
 		1E7058E728879D370054B6BE /* EmojiBook_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1E7058E328879D360054B6BE /* EmojiBook_Widget.intentdefinition */; };
 		1E7058E828879D370054B6BE /* EmojiBook_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 1E7058E328879D360054B6BE /* EmojiBook_Widget.intentdefinition */; };
 		1E7058EB28879D370054B6BE /* EmojiBook-WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1E7058DA28879D360054B6BE /* EmojiBook-WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		1E7058F02887CBF50054B6BE /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69591C1F2886ACD300B026BF /* Emoji.swift */; };
+		1E7058F32887CC340054B6BE /* EmojiWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E7058F22887CC340054B6BE /* EmojiWidgetView.swift */; };
 		69591C0B28869A2A00B026BF /* EmojiBook_WidgetKitApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69591C0A28869A2A00B026BF /* EmojiBook_WidgetKitApp.swift */; };
 		69591C0F28869A2C00B026BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69591C0E28869A2C00B026BF /* Assets.xcassets */; };
 		69591C1228869A2C00B026BF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69591C1128869A2C00B026BF /* Preview Assets.xcassets */; };
@@ -56,6 +58,7 @@
 		1E7058E328879D360054B6BE /* EmojiBook_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = EmojiBook_Widget.intentdefinition; sourceTree = "<group>"; };
 		1E7058E428879D370054B6BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E7058E628879D370054B6BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1E7058F22887CC340054B6BE /* EmojiWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiWidgetView.swift; sourceTree = "<group>"; };
 		69591C0728869A2A00B026BF /* EmojiBook-WidgetKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EmojiBook-WidgetKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69591C0A28869A2A00B026BF /* EmojiBook_WidgetKitApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiBook_WidgetKitApp.swift; sourceTree = "<group>"; };
 		69591C0E28869A2C00B026BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,12 +102,21 @@
 		1E7058E028879D360054B6BE /* EmojiBook-Widget */ = {
 			isa = PBXGroup;
 			children = (
+				1E7058F12887CC040054B6BE /* View */,
 				1E7058E128879D360054B6BE /* EmojiBook_Widget.swift */,
 				1E7058E328879D360054B6BE /* EmojiBook_Widget.intentdefinition */,
 				1E7058E428879D370054B6BE /* Assets.xcassets */,
 				1E7058E628879D370054B6BE /* Info.plist */,
 			);
 			path = "EmojiBook-Widget";
+			sourceTree = "<group>";
+		};
+		1E7058F12887CC040054B6BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1E7058F22887CC340054B6BE /* EmojiWidgetView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		69591BFE28869A2A00B026BF = {
@@ -290,8 +302,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E7058F02887CBF50054B6BE /* Emoji.swift in Sources */,
 				1E7058E728879D370054B6BE /* EmojiBook_Widget.intentdefinition in Sources */,
 				1E7058E228879D360054B6BE /* EmojiBook_Widget.swift in Sources */,
+				1E7058F32887CC340054B6BE /* EmojiWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
