@@ -16,6 +16,7 @@ struct EmojiWidgetView: View {
 
   // MARK: Body
 
+  @ViewBuilder
   var body: some View {
     switch family {
     case .systemSmall:
