@@ -24,6 +24,7 @@
 		69591C222886AD9900B026BF /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69591C212886AD9900B026BF /* HomeViewModel.swift */; };
 		69591C262886B1EE00B026BF /* EmojiTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69591C252886B1EE00B026BF /* EmojiTableView.swift */; };
 		69591C282886B56A00B026BF /* EmojiDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69591C272886B56A00B026BF /* EmojiDetailView.swift */; };
+		69F2C65E2888FD6E00D28947 /* MediumEmojiWidgetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69F2C65D2888FD6E00D28947 /* MediumEmojiWidgetView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		69591C212886AD9900B026BF /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		69591C252886B1EE00B026BF /* EmojiTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableView.swift; sourceTree = "<group>"; };
 		69591C272886B56A00B026BF /* EmojiDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiDetailView.swift; sourceTree = "<group>"; };
+		69F2C65D2888FD6E00D28947 /* MediumEmojiWidgetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediumEmojiWidgetView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				1E7058F22887CC340054B6BE /* EmojiWidgetView.swift */,
+				69F2C65D2888FD6E00D28947 /* MediumEmojiWidgetView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				1E7058E728879D370054B6BE /* EmojiBook_Widget.intentdefinition in Sources */,
 				1E7058E228879D360054B6BE /* EmojiBook_Widget.swift in Sources */,
 				1E7058F32887CC340054B6BE /* EmojiWidgetView.swift in Sources */,
+				69F2C65E2888FD6E00D28947 /* MediumEmojiWidgetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
