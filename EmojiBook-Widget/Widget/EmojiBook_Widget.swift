@@ -49,7 +49,6 @@ struct EmojiBook_WidgetEntryView: View {
   }
 }
 
-@main
 struct EmojiBook_Widget: Widget {
   let kind: String = "EmojiBook_Widget"
 

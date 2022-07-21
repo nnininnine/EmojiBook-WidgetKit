@@ -33,6 +33,12 @@ struct EmojiWidgetView: View {
   }
 }
 
+struct EmojiWidgetPlaceholderView: View {
+  var body: some View {
+    Color(UIColor.systemIndigo)
+  }
+}
+
 struct EmojiWidgetView_Previews: PreviewProvider {
   static var previews: some View {
     EmojiWidgetView(emoji: EmojiProvider.shared.rand())

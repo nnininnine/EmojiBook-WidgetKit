@@ -34,8 +34,6 @@
 				<dict>
 					<key>INIntentParameterConfigurable</key>
 					<true/>
-					<key>INIntentParameterCustomDisambiguation</key>
-					<true/>
 					<key>INIntentParameterDisplayName</key>
 					<string>Emoji</string>
 					<key>INIntentParameterDisplayNameID</key>
@@ -84,8 +82,6 @@
 						</dict>
 					</array>
 					<key>INIntentParameterSupportsDynamicEnumeration</key>
-					<true/>
-					<key>INIntentParameterSupportsResolution</key>
 					<true/>
 					<key>INIntentParameterTag</key>
 					<integer>2</integer>

@@ -12,7 +12,7 @@
 			<array/>
 			<key>IntentsSupported</key>
 			<array>
-				<string>EmojiBook_Widget</string>
+				<string>SelectEmojiIntent</string>
 			</array>
 		</dict>
 		<key>NSExtensionPointIdentifier</key>
