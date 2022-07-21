@@ -11,23 +11,23 @@ import WidgetKit
 struct EmojiWidgetView: View {
   // MARK: Properties
 
+  @Environment(\.widgetFamily) var family: WidgetFamily
   let emoji: Emoji
 
   // MARK: Body
 
   var body: some View {
-    ZStack {
-      Color.indigo
-
-      VStack {
-        Text(emoji.emoji)
-          .font(.system(size: 56))
-        Text(emoji.name)
-          .font(.headline)
-          .foregroundColor(.white)
-          .multilineTextAlignment(.center)
-          .padding([.leading, .trailing])
-      }
+    switch family {
+    case .systemSmall:
+      SmallEmojiWidgetView(emoji: emoji)
+    case .systemMedium:
+      MediumEmojiWidgetView(emoji: emoji)
+    case .systemLarge:
+      LargeEmojiWidgetView(emoji: emoji)
+    case .systemExtraLarge:
+      EmptyView()
+    @unknown default:
+      EmptyView()
     }
   }
 }
