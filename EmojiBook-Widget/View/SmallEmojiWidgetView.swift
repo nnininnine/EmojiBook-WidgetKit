@@ -9,13 +9,32 @@ import SwiftUI
 import WidgetKit
 
 struct SmallEmojiWidgetView: View {
+  // MARK: Properties
+
+  let emoji: Emoji
+
+  // MARK: Body
+
   var body: some View {
-    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    ZStack {
+      Color.indigo
+
+      VStack {
+        Text(emoji.emoji)
+          .font(.system(size: 56))
+        Text(emoji.name)
+          .font(.headline)
+          .foregroundColor(.white)
+          .multilineTextAlignment(.center)
+          .padding([.leading, .trailing])
+      }
+    }
   }
 }
 
 struct SmallEmojiWidgetView_Previews: PreviewProvider {
   static var previews: some View {
-    SmallEmojiWidgetView()
+    SmallEmojiWidgetView(emoji: EmojiProvider.shared.rand())
+      .previewContext(WidgetPreviewContext(family: .systemSmall))
   }
 }
