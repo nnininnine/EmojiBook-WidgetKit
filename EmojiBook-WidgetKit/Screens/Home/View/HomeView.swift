@@ -26,7 +26,8 @@ struct HomeView: View {
       .navigationTitle("Emoji Book 🥸")
     }
     .onOpenURL { url in
-      print(url)
+      guard let emoji = vm.emojis.first(where: { $0.url == url }) else { return }
+      vm.selectedEmoji = emoji
     }
     .sheet(item: $vm.selectedEmoji, content: { EmojiDetailView(emoji: $0) })
     .navigationViewStyle(.stack)
