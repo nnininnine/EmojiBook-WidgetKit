@@ -36,6 +36,6 @@ struct EmojiWidgetView: View {
 struct EmojiWidgetView_Previews: PreviewProvider {
   static var previews: some View {
     EmojiWidgetView(emoji: EmojiProvider.shared.rand())
-      .previewContext(WidgetPreviewContext(family: .systemSmall))
+      .previewContext(WidgetPreviewContext(family: .systemMedium))
   }
 }

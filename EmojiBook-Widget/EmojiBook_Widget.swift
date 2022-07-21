@@ -45,6 +45,7 @@ struct EmojiBook_WidgetEntryView: View {
 
   var body: some View {
     EmojiWidgetView(emoji: entry.emoji)
+      .widgetURL(entry.emoji.url)
   }
 }
 

@@ -10,10 +10,22 @@ import Foundation
 typealias Emojis = [Emoji]
 
 struct Emoji: Identifiable {
-  let id: UUID = .init()
+  let id: UUID
   let emoji: String
   let name: String
   let description: String
+  let url: URL?
+
+  init(emoji: String, name: String, description: String) {
+    self.id = .init()
+    self.emoji = emoji
+    self.name = name
+    self.description = description
+
+    // setup URL
+    let urlString = "emoji://\(name.filter { !$0.isWhitespace })"
+    self.url = URL(string: urlString)
+  }
 }
 
 struct EmojiProvider {
