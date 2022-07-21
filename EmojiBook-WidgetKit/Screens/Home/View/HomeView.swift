@@ -20,15 +20,15 @@ struct HomeView: View {
         ForEach(vm.emojis) { emoji in
           EmojiTableView(emoji: emoji, action: {
             vm.selectedEmoji = emoji
-            vm.isShowDetail = true
           })
         }
       }
-      .sheet(isPresented: $vm.isShowDetail, content: {
-        EmojiDetailView(emoji: vm.selectedEmoji)
-      })
       .navigationTitle("Emoji Book 🥸")
     }
+    .onOpenURL { url in
+      print(url)
+    }
+    .sheet(item: $vm.selectedEmoji, content: { EmojiDetailView(emoji: $0) })
     .navigationViewStyle(.stack)
   }
 }
