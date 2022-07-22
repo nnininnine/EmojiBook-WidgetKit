@@ -12,7 +12,7 @@ import WidgetKit
 struct EmojiWidgetBundle: WidgetBundle {
   @WidgetBundleBuilder
   var body: some Widget {
-    EmojiBook_Widget()
     CustomEmojiWidget()
+    EmojiBook_Widget()
   }
 }
