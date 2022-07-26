@@ -24,13 +24,11 @@ struct Provider: TimelineProvider {
 
     // Generate a timeline consisting of five entries an hour apart, starting from the current date.
     let currentDate = Date()
-    for hourOffset in 0 ..< 5 {
-      let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-      let entry = SimpleEntry(date: entryDate, emoji: EmojiProvider.shared.rand())
-      entries.append(entry)
-    }
+    let nextUpdateDate = Calendar.current.date(byAdding: .minute, value: 15, to: currentDate)!
+    let entry = SimpleEntry(date: currentDate, emoji: EmojiProvider.shared.rand())
+    entries.append(entry)
 
-    let timeline = Timeline(entries: entries, policy: .atEnd)
+    let timeline = Timeline(entries: entries, policy: .after(nextUpdateDate))
     completion(timeline)
   }
 }
