@@ -41,7 +41,11 @@ struct EmojiWidgetPlaceholderView: View {
 
 struct EmojiWidgetView_Previews: PreviewProvider {
   static var previews: some View {
-    EmojiWidgetView(emoji: EmojiProvider.shared.rand())
+    SmallEmojiWidgetView(emoji: EmojiProvider.shared.rand())
+      .previewContext(WidgetPreviewContext(family: .systemSmall))
+    MediumEmojiWidgetView(emoji: EmojiProvider.shared.rand())
       .previewContext(WidgetPreviewContext(family: .systemMedium))
+    LargeEmojiWidgetView(emoji: EmojiProvider.shared.rand())
+      .previewContext(WidgetPreviewContext(family: .systemLarge))
   }
 }
